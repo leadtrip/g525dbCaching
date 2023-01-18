@@ -8,7 +8,7 @@ class Engine {
     static hasMany = [sparkPlugs: SparkPlug]
 
     static mapping = {
-
+        cache true
     }
 
     @Override

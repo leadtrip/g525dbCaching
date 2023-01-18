@@ -11,11 +11,23 @@ abstract class CarService implements ICarService{
     }
 
     def findCarByName( String name ) {
-        log.info("================= Getting car with criteria query =================")
+        log.info("================= Getting car withCriteria query =================")
         Car.withCriteria {
             eq('name', name)
             cache true
         }[0]
+    }
+
+    def findCarsByEngineBhpAndName( String name, Integer bhp ) {
+        log.info("================= Finding cars createCriteria query =================")
+        Car.createCriteria().list {
+            cache true
+            engine {
+                eq 'bhp', bhp
+            }
+            eq 'name', name
+            order 'name', 'desc'
+        }
     }
 
 }

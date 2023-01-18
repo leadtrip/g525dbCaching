@@ -13,7 +13,8 @@ class CarController {
         def merc = carService.get(1)
         [dataServiceResult: merc,
          dynamicFinderResult: carService.findByEngine(merc.engine),
-         criteriaResult: carService.findCarByName(merc.name)]
+         criteriaResult: carService.findCarByName(merc.name),
+        criteriaListResult: carService.findCarsByEngineBhpAndName( merc.name, merc.engine.bhp )]
     }
 
     def index(Integer max) {

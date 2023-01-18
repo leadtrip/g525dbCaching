@@ -20,8 +20,12 @@
             <td>${dynamicFinderResult}</td>
         </tr>
         <tr>
-            <td>Criteria</td>
+            <td>With criteria</td>
             <td>${criteriaResult}</td>
+        </tr>
+        <tr>
+            <td>Create criteria</td>
+            <td>${criteriaListResult}</td>
         </tr>
     </table>
 </body>
