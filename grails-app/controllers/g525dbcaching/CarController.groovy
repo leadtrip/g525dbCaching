@@ -10,8 +10,11 @@ class CarController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def testCaching() {
+        log.info("================= Getting car with data service =================")
         def merc = carService.get(1)
         [dataServiceResult: merc,
+         getCarResult: carService.getCar(1),
+         readCarResult: carService.readCar(1),
          dynamicFinderResult: carService.findByEngine(merc.engine),
          criteriaResult: carService.findCarByName(merc.name),
         criteriaListResult: carService.findCarsByEngineBhpAndName( merc.name, merc.engine.bhp )]

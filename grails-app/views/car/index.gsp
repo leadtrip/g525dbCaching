@@ -6,7 +6,6 @@
 </head>
 
 <body>
-    <g:link action="testCaching" class="btn btn-primary" role="button">Test caching</g:link>
     <table class="table table-bordered">
         <tr>
             <th>Name</th>

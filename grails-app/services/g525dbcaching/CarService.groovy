@@ -10,6 +10,16 @@ abstract class CarService implements ICarService{
         Car.findByEngine( engine )
     }
 
+    def readCar( Serializable id ) {
+        log.info("================= Read car =================")
+        Car.read(id)
+    }
+
+    def getCar( Serializable id ) {
+        log.info("================= Get car =================")
+        Car.get(id)
+    }
+
     def findCarByName( String name ) {
         log.info("================= Getting car withCriteria query =================")
         Car.withCriteria {

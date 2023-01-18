@@ -17,11 +17,11 @@
         </tr>
         <tr>
             <td>Read car</td>
-            <td>${readCarResult}</td>
+            <td>${readCarManufacturerResult}</td>
         </tr>
         <tr>
             <td>Get car</td>
-            <td>${getCarResult}</td>
+            <td>${getCarManufacturerResult}</td>
         </tr>
         <tr>
             <td>Dynamic finder</td>

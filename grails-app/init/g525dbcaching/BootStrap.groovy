@@ -10,6 +10,8 @@ class BootStrap {
 
     @Transactional
     void addCars() {
+        new CarManufacturer(name: 'Mercedes', address: 'Spooner street').save()
+
         def engine = new Engine(name: 'MERCENG1', bhp: 200)
         engine.addToSparkPlugs(new SparkPlug(name: 'SP1'))
         engine.addToSparkPlugs(new SparkPlug(name: 'SP2'))
